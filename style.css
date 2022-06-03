@@ -1,0 +1,309 @@
+/* Fontes pro "Na Luiza" */
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap');
+
+@font-face {
+    font-family: 'NaLuiza';
+    src: url('fontes/VintageParty-FreeVersion.ttf');
+}
+
+@font-face {
+    font-family: 'eustachioNormal';
+    src: url(fontes/Eustachio_demo\ version.otf);
+}
+
+/* Fontes pra ilustrador e botao  */
+
+@font-face {
+    font-family: 'close';
+    src: url(fontes/Close.otf);
+}
+body {
+    /* background-color: #b3c0ba; */
+    background-color: #F2d5ce;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    
+}
+
+
+.apresentacao img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.apresentacao {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.apresentacao h1{
+    font-family:'eustachioNormal';
+    color: #d75b69;
+    font-size: 80px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-shadow:  
+      -1px 1px 0 #1F2133, 
+      -2px 2px 0 #1F2133, 
+      -3px 3px 0 #1F2133, 
+      -4px 4px 0 #1F2133, 
+      -5px 5px 0 #1F2133, 
+      -6px 6px 0 #1F2133, 
+      -7px 7px 0 #1F2133, 
+      -8px 8px 0 #1F2133, 
+      -9px 9px 0 #1F2133, 
+      -10px 10px 0 #1F2133, 
+      -11px 11px 0 #1F2133, 
+      -12px 12px 0 #1F2133, 
+      -13px 13px 12px rgba(0, 0, 0, 0.55), 
+      -13px 13px 1px rgba(0, 0, 0, 0.5);
+}
+
+.apresentacao p{
+    font-family: 'close';
+    color: #1F2133;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-left: 20px;
+}
+
+.apresentacao hr {
+    width: 125px;
+    height: 1px;
+    background-color: #1F2133;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#botoes{
+    background-color: #1F2133;
+    color: white;
+    padding: 5px;
+    height: 43px;
+    width: 300px;
+    border-radius: 30px;
+    border: none;
+    font-family: 'close';
+    font-size: 15px;
+}
+
+#botoes:hover{
+    transform: scale(1.05);
+    outline: double #d75b69 ;
+    cursor: pointer;
+}
+
+.botao1{
+    padding: 10px;
+}
+
+.mePague{
+    background-color: #e0c098;
+    width: 350px;
+    text-align: center;
+    border: #1E3648 1px solid;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+#icon{
+    width: 50px;
+}
+
+#icon:hover{
+    transform: scale(1.05);
+}
+
+.icons{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+#icon1{
+    width: 55px;
+}
+#icon1:hover{
+    transform: scale(1.05);
+}
+
+#estrela1{
+    display: none;
+}
+
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-family: 'close';
+    color: #1E3648;
+}
+
+.modal-container p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+
+.modal-container.mostrar{
+    display: flex;
+}
+
+.modal{
+    background-color: white;
+    width: 60%;
+    min-width: 300px;
+    padding: 40px;
+    border: 10px solid #1E3648;
+    box-shadow: 0 0 0 10px white;
+    position: relative;
+}
+
+#qrCodeLuiza{
+    width: 150px;
+}
+
+@keyframes modal{
+    from{
+        opacity: 0;
+        transform: translate3d(0,-60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+
+    }
+}
+
+.mostrar .modal{
+    animation: modal .3s;
+}
+
+
+.fechar{
+    position: absolute;
+    top: -35px;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background-color: #1E3648;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 4px 0 rgba(1, 2, 1, 0.5);
+}
+
+#btnCopiar{
+    background-color: #1E3648;
+    color: white;
+    border-radius: 50px;
+    width: 130px;
+    height: 30px;
+    border: 3px solid #F26419;
+    box-shadow: 0 4px 4px 0 rgba(1, 2, 1, 0.5);
+    cursor: pointer;
+}
+
+/* Telefones em paisagem e abaixo */
+@media (max-width: 767px) { 
+    .apresentacao img {
+        width: 120px;
+        border-radius: 50%;
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+    .apresentacao h1{
+        font-family:'eustachioNormal';
+        color: #d75b69;
+        font-size: 80px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-shadow:  
+          -1px 1px 0 #1F2133, 
+          -2px 2px 0 #1F2133, 
+          -3px 3px 0 #1F2133, 
+          -4px 4px 0 #1F2133, 
+          -5px 5px 0 #1F2133, 
+          -6px 6px 0 #1F2133, 
+          -7px 7px 0 #1F2133, 
+          -8px 8px 0 #1F2133, 
+          -9px 9px 0 #1F2133, 
+          -10px 10px 0 #1F2133, 
+          -11px 11px 0 #1F2133, 
+          -12px 12px 0 #1F2133, 
+          -13px 13px 12px rgba(0, 0, 0, 0.55), 
+          -13px 13px 1px rgba(0, 0, 0, 0.5);
+    }
+    .apresentacao p{
+        font-family:'close';
+        color: #1F2133;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    
+    .apresentacao hr {
+        width: 125px;
+        height: 1px;
+        background-color: #1F2133;
+    }
+    .botao1{
+        padding: 8px;
+    }
+    #botoes{
+        background-color: #1F2133;
+        color: white;
+        padding: 2px;
+        height: 42px;
+        width: 220px;
+        border-radius: 30px;
+        border: none;
+        font-family: 'close';
+        font-size: 15px;
+    }
+    .icons{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 100%;
+        margin-top: 10px;
+    }
+    #icon1{
+        width: 58px;
+    }
+    
+    #estrela1{
+       display: block;
+       position: absolute;
+       width: 40px;
+       top: 325px;
+       left: 60px;
+   } 
+}
